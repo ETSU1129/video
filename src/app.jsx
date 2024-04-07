@@ -35,7 +35,7 @@ export default function App() {
 
       <Html portal={document.body}>
         <div>
-          <h1>Hello, world!</h1>
+          <h1>Hello</h1>
         </div>
       </Html>
       <Environment
@@ -70,7 +70,7 @@ function Carla(props) {
     <mesh castShadow receiveShadow geometry={nodes.roof.geometry}  >
         < MeshReflectorMaterial
           blur={[300, 100]}
-          resolution={2048}
+          resolution={2048/4}
           mixBlur={1}
           mixStrength={80}
           roughness={1}
@@ -87,7 +87,7 @@ function Carla(props) {
     <mesh castShadow receiveShadow geometry={nodes.peple.geometry}  >
     < MeshReflectorMaterial
           blur={[300, 100]}
-          resolution={2048}
+          resolution={2048/4}
           mixBlur={1}
           mixStrength={80}
           roughness={0.2}
@@ -128,7 +128,7 @@ function Ground() {
           <Plane  position={[1,0,-1]}args={[25, 25]}  rotation={[-Math.PI / 2, 0, Math.PI / 1]}>
           <MeshReflectorMaterial
           blur={[300, 100]}
-          resolution={2048}
+          resolution={2048/4}
           mixBlur={0}
           mixStrength={80}
           roughness={1}
